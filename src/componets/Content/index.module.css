@@ -1,6 +1,7 @@
 .section_container {
   background-color: var(--gray-600);
   height: calc(100vh - 200px);
+  padding-bottom: 70px;
 
   display: flex;
   justify-content: center;
@@ -21,7 +22,18 @@
   border: 1px solid var(--gray-700);
   padding: 0px 16px;
   border-radius: 8px;
+  border: none;
 }
+
+.input:focus{
+  filter: brightness(1.25);
+}
+
+.input:focus-visible{
+  outline: 3px solid var(--purple-dark);
+}
+
+
 
 .button {
   display: flex;
@@ -38,7 +50,12 @@
 }
 
 .button:hover {
-  filter: brightness(1.5);
+  filter: brightness(1.25);
+}
+
+.button:disabled {
+  filter: grayscale(100%);
+  cursor: not-allowed;
 }
 
 .content_header {
